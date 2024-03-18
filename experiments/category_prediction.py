@@ -11,7 +11,7 @@ from datasets import Dataset
 from datasets import load_dataset
 
 model_type = "roberta"
-model_name = "NLPC-UOM/SinBERT-large"
+model_name = "NLPC-UOM/SinBERT-small"
 
 train = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Categories', split='train'))
 test = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Categories', split='test'))
