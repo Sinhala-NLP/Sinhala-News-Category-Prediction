@@ -13,14 +13,14 @@ from datasets import load_dataset
 model_type = "xlmroberta"
 model_name = "FacebookAI/xlm-roberta-large"
 
-train = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Media', split='train'))
-test = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Media', split='test'))
+train = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Categories', split='train'))
+test = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Categories', split='test'))
 
 train = train.rename(columns={'News Content': 'text', 'Category': 'labels'}).dropna()
-train['labels'] = encode(train["labels"])
+train['labels'] = encode(train['labels'])
 
 test = test.rename(columns={'News Content': 'text', 'Category': 'labels'}).dropna()
-test['labels'] = encode(test["labels"])
+test['labels'] = encode(test['labels'])
 
 model_args = ClassificationArgs()
 
