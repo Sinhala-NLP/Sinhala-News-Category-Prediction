@@ -54,7 +54,7 @@ train, dev = train_test_split(train, test_size=0.1)
 
 
 model.train_model(train, eval_df=dev, macro_f1=macro_f1, weighted_f1=weighted_f1)
-model = ClassificationModel(model_args.model_type, model_args.best_model_dir, num_labels=10,
+model = ClassificationModel(model_args.model_type, model_args.best_model_dir, num_labels=4,
                      use_cuda=torch.cuda.is_available(), args=model_args)
 
 test_sentences = test['text'].tolist()
