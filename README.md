@@ -5,7 +5,7 @@ This is a text classification task created with the [NSINA dataset](https://gith
 
 
 ## Data
-First, for this task, we dropped all the news articles in NSINA 1.0 without a category as some news sources prefer not to categorise them. Next, we identified the top 100 news categories from the available news instances. We grouped possible categories into four main categories: local news, international news, sports news, and business news.
+First, for this task, we dropped all the news articles in NSINA 1.0 without a category as some news sources prefer not to categorise them. Next, we identified the top 100 news categories from the available news instances. We grouped possible categories into four main categories: local news, international news, sports news, and business news. To avoid bias, we undersampled the dataset. We only used 10,000 instances from each category, and for the ``Business" category, we used the original number of instances which was 8777 articles. We divided this dataset into a training and test set following a 0.8 split
 Data can be loaded into pandas dataframes using the following code. 
 
 ```python
@@ -15,6 +15,8 @@ from datasets import load_dataset
 train = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Categories', split='train'))
 test = Dataset.to_pandas(load_dataset('sinhala-nlp/NSINA-Categories', split='test'))
 ```
+
+
 
 ## Citation
 If you are using the dataset or the models, please cite the following paper.
