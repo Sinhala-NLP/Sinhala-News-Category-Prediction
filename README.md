@@ -5,7 +5,7 @@ This is a text classification task created with the [NSINA dataset](https://gith
 
 
 ## Data
-First, for this task, we dropped all the news articles in NSINA without a category as some news sources prefer not to categorise them. Next, we identified the top 100 news categories from the available news instances. We grouped possible categories into four main categories: local news, international news, sports news, and business news.
+First, for this task, we dropped all the news articles in NSINA 1.0 without a category as some news sources prefer not to categorise them. Next, we identified the top 100 news categories from the available news instances. We grouped possible categories into four main categories: local news, international news, sports news, and business news.
 Data can be loaded into pandas dataframes using the following code. 
 
 ```python
